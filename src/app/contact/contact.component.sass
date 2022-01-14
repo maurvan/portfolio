@@ -1,16 +1,44 @@
+/* tout le bloc */
 .blocContact
     width: 100%
     height: auto
 
-.textContact
-    width: 100%
-    min-height: 80px
-    resize: none
+    .contactName
+        width: 100%
+        white-space: nowrap
+        
+        #prenom
+            width: 50%
 
-.btnContact
-    background-color: #168497
-    padding: 10px
-    border-radius: 5px
+        #nom
+            width: 50%
 
-    &:hover
-        // TODO
+    #email
+        width: 100%
+        padding: 5px
+        margin: 15px 0px 15px 0px
+
+    /* textarea */ 
+    .textContact
+        width: 100%
+        min-height: 80px
+        resize: vertical
+        overflow: auto
+        font-family: sans-serif
+        font-size: 13px
+        margin-bottom: 5px
+        padding: 5px
+
+    .btnContact
+        background-color: #168497
+        padding: 12px 20px 12px 20px
+        border-radius: 20px
+        color: white
+        margin-top: 5px
+        cursor: pointer
+        border: 1px solid #168497
+
+        &:hover
+            background-color: white
+            border: 1px solid #168497
+            color: #168497
