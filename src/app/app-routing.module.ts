@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { SkillsComponent } from './skills/skills.component';
-import { WaveComponent } from './wave/wave.component';
 
 const routes: Routes = [
 
-  { path: '', component: WaveComponent },
-  { path: '', component: AboutComponent },
-  { path: '', component: SkillsComponent },
-  { path: '', component: ProjectsComponent },
-  { path: '', component: ContactComponent },
-  { path: '', component: FooterComponent }
+  { path: 'wave', loadChildren: () => import('./wave/wave.component').then(m => m.WaveComponent) },
+  { path: 'about', loadChildren: () => import('./about/about.component').then(m => m.AboutComponent) },
+  { path: 'skills', loadChildren: () => import('./skills/skills.component').then(m => m.SkillsComponent) },
+  { path: 'projects', loadChildren: () => import('./projects/projects.component').then(m => m.ProjectsComponent) },
+  { path: 'contact', loadChildren: () => import('./contact/contact.component').then(m => m.ContactComponent) },
+  { path: 'footer', loadChildren: () => import('./footer/footer.component').then(m => m.FooterComponent) },
+  { path: '', redirectTo: '', pathMatch: 'full' },
 
 ];
 

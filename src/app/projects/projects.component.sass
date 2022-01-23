@@ -1,5 +1,6 @@
 .project
     display: flex
+    flex-direction: row
 
     .left
         width: 40%
@@ -17,3 +18,14 @@
     background-color: #168497
     width: 400px
     height: 186px
+
+/* Responsive */
+@media (max-width: 576px)
+    .project
+        flex-direction: column
+
+        .left
+            width: 100%
+
+        .right
+            width: 100%

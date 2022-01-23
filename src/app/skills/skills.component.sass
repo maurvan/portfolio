@@ -1,6 +1,7 @@
 .blocCompetences
     width: 100%
     display: flex
+    flex-direction: row
     flex-wrap: wrap
 
     .categ
@@ -30,3 +31,11 @@
 
             .title
                 font-weight: bold
+
+/* Responsive */
+@media (max-width: 576px)
+    .blocCompetences
+        flex-direction: column
+
+        .categ
+            width: 100%
